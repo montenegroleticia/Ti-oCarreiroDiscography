@@ -11,7 +11,7 @@ export const ContainerSearchBar = styled.div`
     color: #606060;
     font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 40px;
   }
