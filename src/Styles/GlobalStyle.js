@@ -9,6 +9,9 @@ body {
     background-image: url(${Background});
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 a {
     text-decoration: none;
