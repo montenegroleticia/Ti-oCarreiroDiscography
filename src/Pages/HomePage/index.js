@@ -22,7 +22,11 @@ export default function HomePage() {
       <Header />
       <ContainerSearch>
         <SearchBar getAlbum={getAlbum} />
-        <Albums album={album} />
+        {album.length !== 0
+          ? album.data.map((album, index) => (
+              <Albums key={index} body={album} />
+            ))
+          : ""}
       </ContainerSearch>
     </>
   );

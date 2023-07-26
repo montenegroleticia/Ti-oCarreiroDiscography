@@ -1,13 +1,13 @@
 import Track from "../Track";
 import { ContainerAlbum } from "./style";
 
-export default function Albums({ album }) {
+export default function Albums({ body }) {
   return (
     <>
-      {album !== "" ? (
+      {body.length !== 0 ? (
         <ContainerAlbum>
           <h3>
-            Álbum: {album.data[0].name}, {album.data[0].year}
+            Álbum: {body.name}, {body.year}
           </h3>
           <section>
             <div>
@@ -16,8 +16,8 @@ export default function Albums({ album }) {
             </div>
             <h4>Duração</h4>
           </section>
-          {album.data[0].tracks &&
-            album.data[0].tracks.map((track, index) => (
+          {body.tracks &&
+            body.tracks.map((track, index) => (
               <Track key={index} body={track} />
             ))}
         </ContainerAlbum>

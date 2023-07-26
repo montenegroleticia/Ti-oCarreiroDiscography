@@ -2,7 +2,6 @@ import axios from "axios";
 import createConfig from "../helpers";
 
 function getAlbum(searchValue) {
-  console.log(searchValue);
   const promise = axios.get(
     `${process.env.REACT_APP_BASE_URL}/album?keyword=${searchValue}&limit=10&page=1`,
     createConfig()

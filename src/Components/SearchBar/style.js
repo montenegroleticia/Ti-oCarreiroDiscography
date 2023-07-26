@@ -40,6 +40,7 @@ export const ContainerSearchBar = styled.div`
     line-height: 40px;
   }
   button {
+    cursor: pointer;
     width: 150px;
     height: 50px;
 
