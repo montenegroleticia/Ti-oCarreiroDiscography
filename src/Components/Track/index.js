@@ -1,4 +1,4 @@
-import { AddIcon, ContainerTrack, DeleteIcon } from "./style";
+import { ContainerTrack, DeleteIcon } from "./style";
 
 export default function Track({ body }) {
   function secondsToMinutes(duration) {
@@ -15,7 +15,6 @@ export default function Track({ body }) {
       </div>
       <div>
         <h5>{secondsToMinutes(body.duration)}</h5>
-        <AddIcon />
         <DeleteIcon />
       </div>
     </ContainerTrack>

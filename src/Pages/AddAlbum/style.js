@@ -1,34 +1,19 @@
 import styled from "styled-components";
 
-export const ContainerSearchBar = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  margin-top: 8px;
-  margin-bottom: 24px;
-  h4 {
-    margin-left: 16px;
-    color: #606060;
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 40px;
-  }
+export const ContainerAdd = styled.div`
+  width: 80vw;
+  height: 75vh;
+  background-color: rgba(255, 255, 255, 0.5);
   form {
     display: flex;
-    justify-content: space-around;
-  }
-  div {
-    border-radius: 24px;
-    border: none;
-    outline: none;
-    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-top: 40px;
   }
   input {
-    margin-left: 16px;
-    width: 65vw;
+    padding-left: 16px;
+    width: 300px;
     height: 50px;
     border-radius: 24px;
     border: none;
@@ -39,6 +24,12 @@ export const ContainerSearchBar = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 40px;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: button-bevel;
+      margin-right: 16px;
+    }
   }
   button {
     cursor: pointer;

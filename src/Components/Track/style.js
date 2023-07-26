@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiFillFileAdd, AiFillDelete } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
 
 export const ContainerTrack = styled.div`
   display: flex;
@@ -20,14 +20,9 @@ export const ContainerTrack = styled.div`
   }
 `;
 
-export const AddIcon = styled(AiFillFileAdd)`
-  font-size: 16px;
-  color: #505050;
-  margin-right: 24px;
-`;
-
 export const DeleteIcon = styled(AiFillDelete)`
-  font-size: 16px;
+  font-size: 20px;
   color: #505050;
   margin-right: 24px;
+  cursor: pointer;
 `;

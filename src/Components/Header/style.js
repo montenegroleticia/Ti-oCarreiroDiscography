@@ -13,8 +13,10 @@ export const ContainerHeader = styled.div`
   img {
     margin-left: 16px;
     width: 200px;
+    cursor: pointer;
   }
   h1 {
+    cursor: pointer;
     margin-right: 16px;
     color: #606060;
 

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { AiFillFolderAdd, AiFillDelete } from "react-icons/ai";
+import { AiFillFolderAdd, AiFillFileAdd, AiFillDelete } from "react-icons/ai";
 
 export const ContainerAlbum = styled.div`
-  margin-top: 24px;
+  margin-bottom: 40px;
   width: 80vw;
   height: 130px;
   display: flex;
@@ -36,7 +36,7 @@ export const ContainerAlbum = styled.div`
     line-height: 40px;
   }
   h3 {
-    margin-right: 110px;
+    margin-right: 75px;
     color: #404040;
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -47,13 +47,22 @@ export const ContainerAlbum = styled.div`
 `;
 
 export const AddIcon = styled(AiFillFolderAdd)`
-  margin-right: 50px;
+  margin-right: 25px;
   font-size: 24px;
   color: #404040;
+  cursor: pointer;
+`;
+
+export const AddFileIcon = styled(AiFillFileAdd)`
+  margin-right: 25px;
+  font-size: 20px;
+  color: #404040;
+  cursor: pointer;
 `;
 
 export const DeleteIcon = styled(AiFillDelete)`
-  margin-right: 50px;
+  margin-right: 25px;
   font-size: 24px;
   color: #404040;
+  cursor: pointer;
 `;

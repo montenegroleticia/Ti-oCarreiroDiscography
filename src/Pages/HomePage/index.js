@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../Components/Header";
 import AlbumApi from "../../Services/AlbumApi";
 import Albums from "../../Components/Albums";
@@ -16,6 +16,8 @@ export default function HomePage() {
       })
       .catch((err) => alert(JSON.stringify(err.response.data)));
   }
+
+  useEffect(() => getAlbum(""), []);
 
   return (
     <>
