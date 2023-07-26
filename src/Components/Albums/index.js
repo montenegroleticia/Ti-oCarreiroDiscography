@@ -1,20 +1,26 @@
 import Track from "../Track";
-import { ContainerAlbum } from "./style";
+import { AddIcon, ContainerAlbum, DeleteIcon } from "./style";
 
 export default function Albums({ body }) {
   return (
     <>
       {body.length !== 0 ? (
         <ContainerAlbum>
-          <h3>
-            Álbum: {body.name}, {body.year}
-          </h3>
+          <section>
+            <h1>
+              Álbum: {body.name}, {body.year}
+            </h1>
+            <div>
+              <AddIcon />
+              <DeleteIcon />
+            </div>
+          </section>
           <section>
             <div>
-              <h4>N°</h4>
-              <h4>Faixa</h4>
+              <h2>N°</h2>
+              <h2>Faixa</h2>
             </div>
-            <h4>Duração</h4>
+            <h3>Duração</h3>
           </section>
           {body.tracks &&
             body.tracks.map((track, index) => (
