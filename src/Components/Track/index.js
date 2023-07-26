@@ -1,13 +1,13 @@
 import { ContainerTrack } from "./style";
 
-export default function Track() {
+export default function Track({ body }) {
   return (
     <ContainerTrack>
       <div>
-        <h4>11</h4>
-        <h4>Minas gerais</h4>
+        <h4>{body.number}</h4>
+        <h4>{body.title}</h4>
       </div>
-      <h5>3:47</h5>
+      <h5>{body.duration}</h5>
     </ContainerTrack>
   );
 }
