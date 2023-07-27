@@ -7,8 +7,15 @@ export default function Header() {
 
   return (
     <ContainerHeader>
-      <img src={Logo} alt="Logo" onClick={() => navigate(`/`)} />
-      <h1 onClick={() => navigate(`/`)}>Discografia</h1>
+      <img
+        src={Logo}
+        alt="Logo"
+        onClick={() => navigate(`/`)}
+        title="Ir para a página inicial?"
+      />
+      <h1 onClick={() => navigate(`/`)} title="Ir para a página inicial?">
+        Discografia
+      </h1>
     </ContainerHeader>
   );
 }

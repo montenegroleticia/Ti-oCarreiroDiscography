@@ -26,4 +26,28 @@ export const ContainerHeader = styled.div`
     font-size: 44px;
     line-height: 40px;
   }
+  &[title] {
+    position: relative;
+
+    &::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4a90e2;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.01s ease-in-out;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 `;

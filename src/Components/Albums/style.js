@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiFillFolderAdd, AiFillFileAdd, AiFillDelete } from "react-icons/ai";
+import { AiFillFileAdd, AiFillDelete } from "react-icons/ai";
 
 export const ContainerAlbum = styled.div`
   margin-bottom: 16px;
@@ -68,17 +68,6 @@ export const ContainerAlbum = styled.div`
       visibility: visible;
       opacity: 1;
     }
-  }
-`;
-
-export const AddIcon = styled(AiFillFolderAdd)`
-  margin-right: 25px;
-  font-size: 24px;
-  color: #404040;
-  cursor: pointer;
-
-  &:hover {
-    color: #4a90e2;
   }
 `;
 
