@@ -13,7 +13,6 @@ function postTrack(body) {
 function deleteTrack(id) {
   const promise = axios.delete(
     `${process.env.REACT_APP_BASE_URL}/track/${id}`,
-    {},
     createConfig()
   );
   return promise;

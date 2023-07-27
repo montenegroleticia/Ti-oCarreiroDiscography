@@ -1,9 +1,27 @@
+import AlbumApi from "../../Services/AlbumApi";
 import Track from "../Track";
 import { AddFileIcon, AddIcon, ContainerAlbum, DeleteIcon } from "./style";
 import { useNavigate } from "react-router-dom";
 
 export default function Albums({ body }) {
   const navigate = useNavigate();
+
+  function deleteAlbum(id) {
+    const confirmDelete = window.confirm(
+      "Tem certeza que deseja deletar esse álbum?"
+    );
+
+    if (confirmDelete) {
+      AlbumApi.deleteAlbum(id)
+        .then((res) => {
+          alert("Álbum deletado");
+          window.location.reload();
+        })
+        .catch(() =>
+          alert("Não foi possível deletar o albúm. Por favor, tente novamente!")
+        );
+    }
+  }
 
   return (
     <>
@@ -22,7 +40,10 @@ export default function Albums({ body }) {
                 onClick={() => navigate(`/addTrack/${body.id}`)}
                 title="Adicionar Faixa"
               />
-              <DeleteIcon title="Deletar Álbum" />
+              <DeleteIcon
+                onClick={() => deleteAlbum(body.id)}
+                title="Deletar Álbum"
+              />
             </div>
           </section>
           {body.tracks && body.tracks.length > 0 ? (

@@ -21,7 +21,6 @@ function postAlbum(body) {
 function deleteAlbum(id) {
   const promise = axios.delete(
     `${process.env.REACT_APP_BASE_URL}/album/${id}`,
-    {},
     createConfig()
   );
   return promise;

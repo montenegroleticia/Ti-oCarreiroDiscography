@@ -13,7 +13,7 @@ export const ContainerAdd = styled.div`
   }
   input {
     padding-left: 16px;
-    width: 300px;
+    width: 350px;
     height: 50px;
     border-radius: 24px;
     border: none;

@@ -1,3 +1,4 @@
+import TrackApi from "../../Services/TrackApi";
 import { ContainerTrack, DeleteIcon } from "./style";
 
 export default function Track({ body }) {
@@ -5,6 +6,23 @@ export default function Track({ body }) {
     const minutes = Math.floor(duration / 60);
     const remainingSecondes = (duration % 60).toString().padStart(2, "0");
     return minutes + ":" + remainingSecondes;
+  }
+
+  function deleteTrack(id) {
+    const confirmDelete = window.confirm(
+      "Tem certeza que deseja deletar essa faixa?"
+    );
+
+    if (confirmDelete) {
+      TrackApi.deleteTrack(id)
+        .then((res) => {
+          alert("Faixa deletada!");
+          window.location.reload();
+        })
+        .catch(() =>
+          alert("Não foi possível deletar a faixa. Por favor, tente novamente!")
+        );
+    }
   }
 
   return (
@@ -15,7 +33,10 @@ export default function Track({ body }) {
       </div>
       <div>
         <h5>{secondsToMinutes(body.duration)}</h5>
-        <DeleteIcon title="Deletar Álbum" />
+        <DeleteIcon
+          onClick={() => deleteTrack(body.id)}
+          title="Deletar Faixa"
+        />
       </div>
     </ContainerTrack>
   );

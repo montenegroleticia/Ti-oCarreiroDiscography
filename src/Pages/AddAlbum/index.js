@@ -21,7 +21,9 @@ export default function AddAlbum() {
         alert("Álbum adicionado com sucesso!");
         navigate(`/`);
       })
-      .catch((err) => alert(JSON.stringify(err.response.data)));
+      .catch(() =>
+        alert("Não foi possível adicionar o álbum. Por favor, tente novamente!")
+      );
   }
 
   return (

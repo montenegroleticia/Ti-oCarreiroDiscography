@@ -32,7 +32,8 @@ export default function AddTrack() {
         alert("Faixa adicionada com sucesso!");
         navigate(`/`);
       })
-      .catch((err) => alert(JSON.stringify(err.response)));
+      .catch(() =>
+      alert("Não foi possível adicionar a faixa. Por favor, tente novamente!"));
   }
 
   return (
