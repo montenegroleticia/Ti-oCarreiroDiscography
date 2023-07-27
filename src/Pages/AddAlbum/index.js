@@ -2,9 +2,11 @@ import { useState } from "react";
 import Header from "../../Components/Header";
 import AlbumApi from "../../Services/AlbumApi";
 import { ContainerAdd } from "./style";
+import { useNavigate } from "react-router-dom";
 
 export default function AddAlbum() {
   const [form, setForm] = useState({ name: "", year: "" });
+  const navigate = useNavigate();
 
   function handleForm(e) {
     e.preventDefault();
@@ -15,7 +17,10 @@ export default function AddAlbum() {
     e.preventDefault();
 
     AlbumApi.postAlbum(form)
-      .then(alert("Álbum adicionado com sucesso!"))
+      .then((res) => {
+        alert("Álbum adicionado com sucesso!");
+        navigate(`/`);
+      })
       .catch((err) => alert(JSON.stringify(err.response.data)));
   }
 

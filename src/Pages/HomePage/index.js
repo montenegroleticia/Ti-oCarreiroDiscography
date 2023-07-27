@@ -10,10 +10,7 @@ export default function HomePage() {
 
   function getAlbum(searchValue) {
     AlbumApi.getAlbum(searchValue)
-      .then((res) => {
-        setAlbum(res.data);
-        console.log(res.data);
-      })
+      .then((res) => setAlbum(res.data))
       .catch((err) => alert(JSON.stringify(err.response.data)));
   }
 

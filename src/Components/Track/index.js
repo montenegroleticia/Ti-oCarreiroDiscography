@@ -15,7 +15,7 @@ export default function Track({ body }) {
       </div>
       <div>
         <h5>{secondsToMinutes(body.duration)}</h5>
-        <DeleteIcon />
+        <DeleteIcon title="Deletar Álbum" />
       </div>
     </ContainerTrack>
   );

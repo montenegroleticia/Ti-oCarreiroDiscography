@@ -55,5 +55,10 @@ export const ContainerSearchBar = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 40px;
+
+    &:hover {
+      color: #4a90e2;
+      background-color: #fff;
+    }
   }
 `;

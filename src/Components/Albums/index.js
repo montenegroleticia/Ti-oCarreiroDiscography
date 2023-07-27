@@ -14,9 +14,15 @@ export default function Albums({ body }) {
               Álbum: {body.name}, {body.year}
             </h1>
             <div>
-              <AddIcon onClick={() => navigate(`/addAlbum`)} />
-              <AddFileIcon />
-              <DeleteIcon />
+              <AddIcon
+                onClick={() => navigate(`/addAlbum`)}
+                title="Adicionar Álbum"
+              />
+              <AddFileIcon
+                onClick={() => navigate(`/addTrack/${body.id}`)}
+                title="Adicionar Faixa"
+              />
+              <DeleteIcon title="Deletar Álbum" />
             </div>
           </section>
           {body.tracks && body.tracks.length > 0 ? (

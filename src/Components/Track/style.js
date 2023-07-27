@@ -18,6 +18,31 @@ export const ContainerTrack = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  &[title] {
+    position: relative;
+
+    &::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4a90e2;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.01s ease-in-out;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 `;
 
 export const DeleteIcon = styled(AiFillDelete)`
@@ -25,4 +50,8 @@ export const DeleteIcon = styled(AiFillDelete)`
   color: #505050;
   margin-right: 24px;
   cursor: pointer;
+
+  &:hover {
+    color: #4a90e2;
+  }
 `;

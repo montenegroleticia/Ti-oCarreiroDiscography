@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { AiFillFolderAdd, AiFillFileAdd, AiFillDelete } from "react-icons/ai";
 
 export const ContainerAlbum = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   width: 80vw;
-  height: 130px;
+  height: auto;
   display: flex;
   flex-direction: column;
   h1 {
@@ -44,6 +44,31 @@ export const ContainerAlbum = styled.div`
     font-size: 16px;
     line-height: 40px;
   }
+
+  &[title] {
+    position: relative;
+
+    &::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4a90e2;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.01s ease-in-out;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 `;
 
 export const AddIcon = styled(AiFillFolderAdd)`
@@ -51,6 +76,10 @@ export const AddIcon = styled(AiFillFolderAdd)`
   font-size: 24px;
   color: #404040;
   cursor: pointer;
+
+  &:hover {
+    color: #4a90e2;
+  }
 `;
 
 export const AddFileIcon = styled(AiFillFileAdd)`
@@ -58,6 +87,10 @@ export const AddFileIcon = styled(AiFillFileAdd)`
   font-size: 20px;
   color: #404040;
   cursor: pointer;
+
+  &:hover {
+    color: #4a90e2;
+  }
 `;
 
 export const DeleteIcon = styled(AiFillDelete)`
@@ -65,4 +98,8 @@ export const DeleteIcon = styled(AiFillDelete)`
   font-size: 24px;
   color: #404040;
   cursor: pointer;
+
+  &:hover {
+    color: #4a90e2;
+  }
 `;
