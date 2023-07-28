@@ -45,6 +45,10 @@ export const ContainerSearchBar = styled.div`
     width: 150px;
     height: 50px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-radius: 24px;
     background-color: #4a90e2;
     border: transparent;
@@ -59,6 +63,21 @@ export const ContainerSearchBar = styled.div`
     &:hover {
       color: #4a90e2;
       background-color: #fff;
+    }
+  }
+  @media (max-width: 500px) {
+    input {
+      width: 200px;
+      font-size: 14px;
+      height: 30px;
+    }
+    button {
+      width: 75px;
+      font-size: 14px;
+      height: 30px;
+    }
+    h4 {
+      font-size: 14px;
     }
   }
 `;

@@ -36,6 +36,10 @@ export const ContainerAdd = styled.div`
     width: 150px;
     height: 50px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 24px;
     background-color: #4a90e2;
     border: transparent;
@@ -50,6 +54,19 @@ export const ContainerAdd = styled.div`
     &:hover {
       color: #4a90e2;
       background-color: #fff;
+    }
+  }
+
+  @media (max-width: 500px) {
+    input {
+      width: 200px;
+      font-size: 14px;
+      height: 30px;
+    }
+    button {
+      width: 75px;
+      font-size: 14px;
+      height: 30px;
     }
   }
 `;

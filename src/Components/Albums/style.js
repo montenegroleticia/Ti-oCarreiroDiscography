@@ -69,6 +69,18 @@ export const ContainerAlbum = styled.div`
       opacity: 1;
     }
   }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+    h3 {
+      margin-right: 15px;
+      font-size: 14px;
+    }
+  }
 `;
 
 export const AddFileIcon = styled(AiFillFileAdd)`
@@ -80,6 +92,9 @@ export const AddFileIcon = styled(AiFillFileAdd)`
   &:hover {
     color: #4a90e2;
   }
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 export const DeleteIcon = styled(AiFillDelete)`
@@ -90,5 +105,8 @@ export const DeleteIcon = styled(AiFillDelete)`
 
   &:hover {
     color: #4a90e2;
+  }
+  @media (max-width: 500px) {
+    font-size: 16px;
   }
 `;

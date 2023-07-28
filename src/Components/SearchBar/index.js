@@ -19,7 +19,7 @@ export default function SearchBar({ getAlbum }) {
       <form onSubmit={handleSerach}>
         <div>
           <input
-            placeholder="Qual álbum você está procurando?"
+            placeholder="Digite um álbum"
             value={searchValue}
             onChange={handleInputChange}
           />

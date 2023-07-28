@@ -50,4 +50,12 @@ export const ContainerHeader = styled.div`
       opacity: 1;
     }
   }
+  @media (max-width: 500px) {
+    img {
+      width: 120px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+  }
 `;

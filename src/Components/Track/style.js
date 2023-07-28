@@ -43,6 +43,16 @@ export const ContainerTrack = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 500px) {
+    h2 {
+      line-height: 22px;
+    }
+    h5 {
+      font-size: 12px;
+      margin-right: 0;
+    }
+  }
 `;
 
 export const DeleteIcon = styled(AiFillDelete)`
@@ -53,5 +63,9 @@ export const DeleteIcon = styled(AiFillDelete)`
 
   &:hover {
     color: #4a90e2;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 16px;
   }
 `;
