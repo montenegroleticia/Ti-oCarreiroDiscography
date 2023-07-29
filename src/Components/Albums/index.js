@@ -29,7 +29,13 @@ export default function Albums({ body }) {
         <ContainerAlbum>
           <section>
             <h1>
-              Álbum: {body.name}, {body.year}
+              <a
+                href="https://g.co/kgs/AHnmeZ"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Álbum: {body.name}, {body.year}
+              </a>
             </h1>
             <div>
               <AddFileIcon

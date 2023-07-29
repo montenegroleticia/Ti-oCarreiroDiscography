@@ -15,6 +15,7 @@ body {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 50px #f1e7c5 inset;

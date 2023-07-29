@@ -29,7 +29,13 @@ export default function Track({ body }) {
     <ContainerTrack>
       <div>
         <h2>{body.number}</h2>
-        <h2>{body.title}</h2>
+        <a
+          href="https://g.co/kgs/AHnmeZ"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <h2>{body.title}</h2>
+        </a>
       </div>
       <div>
         <h5>{secondsToMinutes(body.duration)}</h5>
