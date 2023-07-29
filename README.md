@@ -6,10 +6,6 @@ Link to deploy:
 
     https://tiaocarreiro.vercel.app/
 
-.env to localhost:
-
-    REACT_APP_BASE_URL = https://tiao.supliu.com.br/api
-
 Tools
 
 <div>
